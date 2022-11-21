@@ -14,6 +14,7 @@ ENV LANG C.UTF-8
 #        openssl-dev
 
 # Install Codefresh CLI
+RUN apk add --update nodejs npm
 RUN npm install codefresh
 
 # Install Python GitHub module
