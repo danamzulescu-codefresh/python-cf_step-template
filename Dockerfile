@@ -19,7 +19,10 @@ WORKDIR /usr/app
 COPY ./ /usr/app
 
 # Install Codefresh CLI
-RUN npm audit fix --force
+RUN npm cache clean --force
+RUN npm fund
+#RUN npm i --package-lock-only
+#RUN npm audit fix --force
 RUN npm install -g codefresh
 
 # Install Python GitHub module
